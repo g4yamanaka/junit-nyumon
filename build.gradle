@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.7.0'
+    testCompile group: 'org.junit.platform', name: 'junit-platform-launcher', version: '1.7.0'
+    testCompile group: 'org.mockito', name: 'mockito-inline', version: '3.6.28'
+    testCompile group: 'net.bytebuddy', name: 'byte-buddy-agent', version: '1.10.18'
+}
+
+test {
+    useJUnitPlatform()
+}
